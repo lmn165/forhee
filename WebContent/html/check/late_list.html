@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('a[data-toggle="tab"]').on('hidden.bs.tab', function(e) {
+			alert("이벤트 실행됨");
+		});
+	});
+</script>
+
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<h2>출석 관리</h2>
+		<ul id="myTab" class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a data-target="#home"
+				id="home-tab" role="tab" data-toggle="tab" aria-controls="home"
+				aria-expanded="true">지각 학생</a></li>
+
+			<li role="presentation" class=""><a data-target="#profile"
+				role="tab" id="profile-tab" data-toggle="tab"
+				aria-controls="profile" aria-expanded="false">전체 학생</a></li>
+		</ul>
+		<br>
+		<div id="myTabContent" class="tab-content">
+			<div role="tabpanel" class="tab-pane fade active in" id="home"
+				aria-labelledby="home-tab">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>no</th>
+							<th>학생 이름</th>
+							<th>상태 메시지</th>
+							<th>출석 확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>A모 군</td>
+							<td>zzz..</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>B모 씨</td>
+							<td>지각비 걷기 전에 도착합니다</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>C모 양</td>
+							<td>몸이 안좋아서 병원 들렀다가 갈게요</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="profile"
+				aria-labelledby="profile-tab">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>no</th>
+							<th>학생 이름</th>
+							<th>상태 메시지</th>
+							<th>출석 확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>A모 군</td>
+							<td>zzz..</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>B모 씨</td>
+							<td>지각비 걷기 전에 도착합니다</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>C모 양</td>
+							<td>몸이 안좋아서 병원 들렀다가 갈게요</td>
+							<td><a href="#">확인</a></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>D모 씨</td>
+							<td>no comment</td>
+							<td>출석 완료</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>E모 군</td>
+							<td>no comment</td>
+							<td>출석 완료</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
